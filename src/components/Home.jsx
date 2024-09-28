@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
+import {Context} from "../index"
+
+const Row = () => {
+const data = useContext(Context)
+
+
+    return(
+        <>
+        {data}
+        </>
+    )
+}
 
 const Home = () => {
-
-    const [count,setCount] = useState(0)
-    useEffect(()=>{
-        return console.log(count)
-    })
-
   return (
     <div>
-        <button onClick={()=>setCount(count+1)}>Increase</button>
-        {count}
-        <button onClick={()=>setCount(count-1)}>Decrease</button>
-      
+      <Row />
     </div>
   )
 }
