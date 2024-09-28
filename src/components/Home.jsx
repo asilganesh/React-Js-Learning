@@ -1,39 +1,20 @@
-import { useState } from "react"
+import React, { useEffect, useState } from 'react'
 
-const Home = () =>{
+const Home = () => {
 
-    const [inputValue,setInputValue] = useState(0)
+    const [count,setCount] = useState(0)
+    useEffect(()=>{
+        return console.log(count)
+    })
 
-    const input = {
-        padding : "10px",
-
-    }
-
-    const button = {
-        margin : "10px",
-        padding : "10px"
-
-    }
-
-    const increment = () =>{
-        setInputValue(inputValue+1)
-    }
-    
-    const decrement =  () => {
-        setInputValue(inputValue-1)
-    }
-
-    return(
-        <div>
-            <input 
-            style={input}
-            type="number"
-            value={inputValue}
-            />
-            <button style={button} onClick={decrement}>- </button>
-            <button style={button} onClick={increment}>+</button>
-        </div>
-    )
+  return (
+    <div>
+        <button onClick={()=>setCount(count+1)}>Increase</button>
+        {count}
+        <button onClick={()=>setCount(count-1)}>Decrease</button>
+      
+    </div>
+  )
 }
 
 export default Home
