@@ -1,13 +1,12 @@
-import {MyComponent, Sample} from "./components/MyComponent";
+import Header from "./components/Header";
+import Home from "./components/Home";
+
 
 function App() {
   return (
     <div className="App">
-     Hello World 
-     <MyComponent name="Ganesh" classnamefordiv="div1"  income={200}/>
-     <MyComponent name="Veda" classnamefordiv="div2"  />
-     <MyComponent name="Sainath" classnamefordiv="div3" income={300} />
-     <Sample/>
+    <Header />
+    <Home />
     </div>
   );
 }
