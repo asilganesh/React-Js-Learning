@@ -1,14 +1,4 @@
-
-const MyComponent = ({name, classnamefordiv, income =10}) => {
-  return (
-    <>
-    <div className={classnamefordiv}>
-      {name} : $ {income}
-    </div>
-    <hr/>
-    </>
-  )
-}
+import {MyComponent, Sample} from "./components/MyComponent";
 
 function App() {
   return (
@@ -17,6 +7,7 @@ function App() {
      <MyComponent name="Ganesh" classnamefordiv="div1"  income={200}/>
      <MyComponent name="Veda" classnamefordiv="div2"  />
      <MyComponent name="Sainath" classnamefordiv="div3" income={300} />
+     <Sample/>
     </div>
   );
 }
